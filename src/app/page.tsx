@@ -1,6 +1,16 @@
 import Link from "next/link";
 import Navbar1 from "./components/Navbar1";
 import Image from "next/image";
+import Breakfast from "./components/breakfast";
+import burger  from "/public/burger.png"
+import glowshese from "/public/glowchesse.png";
+import italian from "/public/italianpizza.png";
+import slicebeef from "/public/slicebeef.png"
+import kofta from "/public/kofta.png";
+import milkbutter from "/public/milkbutter.png";
+import freshbread from "/public/freshbread.png"
+import chooseandpick from "/public/Choose & pick.png";
+import ourmenu from "/public/From Our Menu.png";
 
 
 export default function Home() {
@@ -185,7 +195,7 @@ food-catogories */}
      {/* clients */}
 
      <div className='  mt-8 '>
-  <Image
+  <Image  
     src="/home-pic-5.png"
     alt='Food Categories'
     height={1000}
@@ -196,37 +206,55 @@ food-catogories */}
 </div>
 
 
+ {/**menu   start */}
+ <div className="h-[656] lg:w-auto bg-black sm:pt-11  sm:ml-0 ">
+      <div className="h-[600] lg:w-[auto]   border-[1px] pl-[100px] sm:ml-0 border-white sm:pt-3">
+         <Image src={chooseandpick} alt="image" width={144} height={40} className=" lg:ml-[800px] sm:ml-[300px] lg:mt-9 lg:mb-4 lg:h-[40px] lg:w-[144px]"/>
+         <Image src={ourmenu} alt="image" className="lg:pl-[600]"/>
+         <div className="h-[60] lg:w-[1100] bg-black lg:mt-[40]   lg:justify-between lg:flex  flex gap-2  lg:gap-3 sm:pt-4 sm:ml-2">
+          <p className="text-orange-400 text-xl">{"Breakfast"}</p>
+          <p className="text-gray-300 text-xl">{"Lunch"}</p>
+          <p className="text-gray-300 text-xl">{"Dinner"}</p>
+          <p className="text-gray-300 text-xl">{"Dessert"}</p>
+          <p className="text-gray-300 text-xl">{"Drink"}</p>
+          <p className="text-gray-300 text-xl">{"Snack"}</p>
+          <p className="text-gray-300 text-xl">{"soups"}</p>
+         </div>
 
-<div className='mt-12 ml-12 hidden lg:block  '>
-  <Image
-    src="/home-pic-6.1.png"
-    alt='Food Categories'
-    height={1000}
-    width={1000}
-  />
-  </div>
-
-  <div className="mt-5 lg:flex lg:justify-center p-8 lg:space-x-3 space-y-8">
-<Image
-    src="/home-pic-6.2.png"
-    alt='Food Categories'
-    height={1000}
-    width={1000}
-  />
-   <Image
-    src="/home-pic-6.3.png"
-    alt='Food Categories'
-    height={1000}
-    width={1000}
-  />
-   <Image
-    src="/home-pic-6.4.png"
-    alt='Food Categories'
-    height={1000}
-    width={1000}
-  />
-   
-  </div>
+         <div className="h-[570] w-[600]    sm:pt-2 lg:flex lg:gap-20  sm:gap-[0px] sm:flex">
+        
+          <div className="h-[515] w-[406]">
+            <Breakfast
+            image={kofta} textone="Lettuce Leaf" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+              <Breakfast
+            image={burger} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={14.5}/>
+                <Breakfast
+            image={milkbutter} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+                  <Breakfast
+            image={freshbread} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+          </div>
+          <div className="h-[515] lg:w-[406] lg:ml-[200px] sm:ml-0 ">
+          <Breakfast
+            image={glowshese} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+                  <Breakfast
+            image={italian} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+                  <Breakfast
+            image={slicebeef} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+                  <Breakfast
+            image={burger} textone="Fresh BreakFast" texttwo="lasus from ek ka iskam kuim ho "
+            number={12.5}/>
+          </div>
+         </div>
+      </div>
+      </div>
+ {/**menu   start */}
 
 <div className='flex justify-center mt-8 scale-150 '>
   <Image
@@ -317,66 +345,6 @@ food-catogories */}
 
    
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
   );
